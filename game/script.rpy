@@ -61,17 +61,16 @@ label A1:
 menu:
     "How do you know it's impossible?":
         jump A11
-    "I'm... abnormal?":
+    "I'm... abnormal?"
         jump A12
 
 label A2:
     e "Of course you are! Look at everyone else, they are enjoying being outside. And what are you doing? You always lose yourself in your thoughts. Be it in school or outside, you never concentrate on anything! Why can't you just be normal and talk to people?"
     
-label A11
+label A11:
     e "I don't care. It's still better than living the hollow life that you propose. I would much rather die having tried to pursue my ambition."
     
-label A12
+label A12:
     e "Maybe you are right... No one before managed to do it, why should I? How silly of me."
-    l "Glad you came to your sense. Now come, the next lesson starts soon.“
 
 return
