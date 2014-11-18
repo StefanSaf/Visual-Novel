@@ -59,18 +59,18 @@ menu:
 label A1:
     l "Recorded history goes back thousands of years. Many people have tried, but noone found any answers. Most of them were very depressed and had no life. They died sad, because they failed. The same will surely happen to you too, if you try the imposssible."
 menu:
-    "How do you know it's impossible?":
+    "I don't care":
         jump A11
-    "I'm... abnormal?"
+    "Maybe you are right... ":
         jump A12
 
 label A2:
-    e "Of course you are! Look at everyone else, they are enjoying being outside. And what are you doing? You always lose yourself in your thoughts. Be it in school or outside, you never concentrate on anything! Why can't you just be normal and talk to people?"
+    l "Of course you are! Look at everyone else, they are enjoying being outside. And what are you doing? You always lose yourself in your thoughts. Be it in school or outside, you never concentrate on anything! Why can't you just be normal and talk to people?"
     
 label A11:
-    e "I don't care. It's still better than living the hollow life that you propose. I would much rather die having tried to pursue my ambition."
+    l "It's still better than living the hollow life that you propose. I would much rather die having tried to pursue my ambition."
     
 label A12:
-    e "Maybe you are right... No one before managed to do it, why should I? How silly of me."
+    l "No one before managed to do it, why should I? How silly of me."
 
 return

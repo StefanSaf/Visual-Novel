@@ -2,8 +2,8 @@
 errors listed below, and try again.
 
 
-File "game/script.rpy", line 75: is not terminated with a newline. (Check strings and parenthesis.)
-(Perhaps you left out a " at the end of the first line.)
-        l "Glad you came to your sense. Now come, the next lesson starts soon.“
+File "game/script.rpy", line 64: Line is followed by a block, despite not being a menu choice. Did you forget a colon at the end of the line?
+    "I'm... abnormal?"
+                      ^
 
 Ren'Py Version: Ren'Py 6.18.3.761
