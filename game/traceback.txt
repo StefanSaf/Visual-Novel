@@ -1,0 +1,43 @@
+﻿I'm sorry, but an uncaught exception occurred.
+
+While running game code:
+  File "script.rpy", line 76, in script
+    "Ludwig" "Why?"
+Exception: Unknown keyword arguments: image
+
+-- Full Traceback ------------------------------------------------------------
+
+Full traceback:
+  File "script.rpy", line 76, in script
+    "Ludwig" "Why?"
+  File "/usr/lib64/python2.7/site-packages/renpy617/renpy/ast.py", line 558, in execute
+    renpy.exports.say(who, what, interact=self.interact)
+  File "/usr/lib64/python2.7/site-packages/renpy617/renpy/exports.py", line 923, in say
+    renpy.store.say(who, what, interact=interact)
+  File "/usr/lib64/python2.7/site-packages/renpy617/renpy/defaultstore.py", line 356, in say
+    who(what, interact=interact)
+  File "/usr/lib64/python2.7/site-packages/renpy617/renpy/character.py", line 817, in __call__
+    self.do_display(who, what, cb_args=self.cb_args, **display_args)
+  File "/usr/lib64/python2.7/site-packages/renpy617/renpy/character.py", line 683, in do_display
+    **display_args)
+  File "/usr/lib64/python2.7/site-packages/renpy617/renpy/character.py", line 462, in display_say
+    what_text = show_function(who, what_string)
+  File "/usr/lib64/python2.7/site-packages/renpy617/renpy/character.py", line 667, in do_show
+    **self.show_args)
+  File "/usr/lib64/python2.7/site-packages/renpy617/renpy/character.py", line 272, in show_display_say
+    return renpy.display.screen.get_widget(screen, "what", layer)
+  File "/usr/lib64/python2.7/site-packages/renpy617/renpy/display/screen.py", line 646, in get_widget
+    screen.update()
+  File "/usr/lib64/python2.7/site-packages/renpy617/renpy/display/screen.py", line 288, in update
+    self.screen.function(**self.scope)
+  File "/usr/lib64/python2.7/site-packages/renpy617/renpy/screenlang.py", line 1236, in __call__
+    values = renpy.ast.apply_arguments(self.parameters, args, kwargs)
+  File "/usr/lib64/python2.7/site-packages/renpy617/renpy/ast.py", line 142, in apply_arguments
+    return parameters.apply(args, kwargs)
+  File "/usr/lib64/python2.7/site-packages/renpy617/renpy/ast.py", line 130, in apply
+    raise Exception("Unknown keyword arguments: %s" % ( ", ".join(values.keys())))
+Exception: Unknown keyword arguments: image
+
+Linux-3.16.5-gentoo-x86_64-Intel-R-_Core-TM-_i7_CPU_Q_740_@_1.73GHz-with-gentoo-2.2
+Ren'Py 6.17.7.521
+test 0.0
