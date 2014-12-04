@@ -24,6 +24,7 @@ init:
     image wolken = Image("pics/black.jpg")
     image playground = Image("pics/black.jpg")
     image ludwig home = Image("pics/ludwig_home.jpg")
+    image credits = Image("pics/credits.png")
 
     image emi sad = im.FactorScale("pics/emi_sad.png", 0.45)
     image emi happy = im.FactorScale("pics/emi_happy.png", 0.45)
@@ -55,7 +56,6 @@ init:
     image professor neutral = im.FactorScale("pics/professor_neutral.png", 0.45)
     image professor surprised = im.FactorScale("pics/professor_surprised.png", 0.45)
 
-
     image professor alt happy = im.FactorScale("pics/professor_alt_happy.png", 0.45)
     image professor alt sad = im.FactorScale("pics/professor_alt_sad.png", 0.45)
     image professor alt neutral = im.FactorScale("pics/professor_alt_neutral.png", 0.45)
@@ -82,6 +82,8 @@ label start:
 
     scene wolken
     l "Why?"
+
+
     l "Why is there anything, instead of nothing?"
     l "Why do I exist? Is there a purpose?"
     l "Do I really exist? Does anything really exist?"
@@ -143,6 +145,7 @@ label A2:
         "You are right...":
             l "I really do behave weird, don't I? Maybe I should start being more normal..."
             e "Glad you came to your senses. Now come, the next lesson starts soon."
+
             jump BadEnd1
 
         "Who cares?":
@@ -169,6 +172,7 @@ label Hallway:
     show emi alt happy at center
     e "Hey, Ludwig! Hi! We don't meet often between lectures, do we? Haha"
     l "Hi, Emi."
+    show credits at center
     "This is Emi. We've known each other for several years. We went to the same school for two years."
     "We got along, but I wouldn't say we were friends. When I had to change schools, we lost contact. But now she attends the same university as me, the TU Wien. I study physics, she math. We met by chance soon after we started, and quickly became friends. She changed quite a bit..."
     e "What was that lecture you just came out of about?"
@@ -798,6 +802,7 @@ label home2:
         "*click click click*"
         "..."
         "Really... that is Professor Netroufal's grandfather. Who would have thought."
+
         "Thinking of it, didn't Richard mention the other Professors were worried about him?"
         "...maybe I should research him too."
         "..."
@@ -1069,5 +1074,11 @@ label true_end:
 
 
 label game_over:
-    scene black
-    "The end"
+    scene black with slowfade
+    show credits at center
+ #   show credits:
+  #      xpos 0.0 ypos 0.0
+   #     linear 120.0 ypos -13021.0
+    centered "Game Over"
+
+    
