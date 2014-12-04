@@ -17,12 +17,13 @@ init:
     image wien energie = Image("pics/wien_energie.jpg")
     image cafe = Image("pics/cafe.jpg")
     image boltzmann grab= Image("pics/boltzmann_grab.jpg")
-    image confrontion = Image("pics/confrontion.jpg")
+    image confrontation = Image("pics/confrontation.jpg")
     image basement_door = Image("pics/basement_door.jpg")
     image tu parking = Image("pics/tu.jpg")
     image lecture  = Image("pics/lecture.jpg")
     image wolken = Image("pics/black.jpg")
     image playground = Image("pics/black.jpg")
+    image ludwig home = Image("pics/ludwig_home.jpg")
 
     image emi sad = im.FactorScale("pics/emi_sad.png", 0.45)
     image emi happy = im.FactorScale("pics/emi_happy.png", 0.45)
@@ -68,6 +69,11 @@ init:
     $ n = Character('Netroufal', color = "#C8FFC8")
     $ ra = Character('Raphael', color = "#C8FFC8")
     $ fb = Character('Facebook', color = "#44619D")
+    $ s = Character('Steinmeier', color = "#44619D")
+
+    #Transitions
+    $ nextday = Fade(0.5, 2, 0.5)
+    $ slowfade = Fade(2, 0, 2)
 
 # The game starts here.
 label start:
@@ -88,8 +94,8 @@ label start:
     l "You see, I do not trust my own thoughts. Or the thoughts of others, no matter how trivial they seem."
     l "Logic can not be proven, because the act of proving is a tool of logic itself."
     l "If a stranger on the street told you to trust him, would you? Just because he told you so?"
-    l "Call me paranoid, but I wouldn't. That is why I don't believe in anything, and there is nothing I trust 100\%."
-    l "What I am looking for is something that can convince me of <i>anything</i>."
+    l "Call me paranoid, but I wouldn't. That is why I don't believe in anything, and there is nothing I trust one hundred percent."
+    l "What I am looking for is something that can convince me of {i}anything{/i}."
     l "The most promising path to that goal seems to be science."
     l "My words contradict each other, but I can not afford the luxury of living without contradictions right now."
 
@@ -117,7 +123,7 @@ menu:
         jump A2
 
 label A1:
-    e "Recorded history goes back thousands of years. Many people have tried, but noone found any answers. Most of them were very depressed and had no life. They died sad, because they failed. The same will surely happen to you too, if you try the imposssible."
+    e "Recorded history goes back thousands of years. Many people have tried, but no one found any answers. Most of them were very depressed and had no life. They died sad, because they failed. The same will surely happen to you too, if you try the imposssible."
 menu:
     "I don't care":
         jump A11
@@ -136,7 +142,7 @@ label A2:
     menu:
         "You are right...":
             l "I really do behave weird, don't I? Maybe I should start being more normal..."
-            e "Glad you came to your sense. Now come, the next lesson starts soon."
+            e "Glad you came to your senses. Now come, the next lesson starts soon."
             jump BadEnd1
 
         "Who cares?":
@@ -153,14 +159,14 @@ label A11:
     
 label A12:
     l "No one before managed to do it, why should I? How silly of me."
-    e "Glad you came to your sense. Now come, the next lesson starts soon."
+    e "Glad you came to your senses. Now come, the next lesson starts soon."
     jump BadEnd1
 
 
 label Hallway:
-    scene bg hallway
+    scene bg hallway with fade
     "I wonder how many weeks it has been now since I joined university? It must be at least eight. I think I am slowly getting used to it here. It is definitely better than school. Finally I can decide by myself what classes I want to attend... This way, I can fully concentrate on my future. I just hope I don't drop out... My grades have always been good to average, but physics is really hard. Wait, what am I thinking? I already decided that I will become a physicist! If I fail I'll try again. How else am I supposed to learn the secret of the walls? What lies beyond them, and who constructed them for what purpose? This is the future I have chosen.... , and I will see it through."
-    show emi regular at center
+    show emi alt happy at center
     e "Hey, Ludwig! Hi! We don't meet often between lectures, do we? Haha"
     l "Hi, Emi."
     "This is Emi. We've known each other for several years. We went to the same school for two years."
@@ -169,7 +175,7 @@ label Hallway:
     l "Oh, it was about thermodynamics. An introduction to entropy. What did you have today?"
     e "Sounds like fun. Actually, I wasn't in a lecture today. I just came here to do some research in the library."
     l "What are you working on?"
-    e "Ah, just my own little theories on formal systems and completion. I have some ideas that seem really crazy, and now I am trying to find out why they wouldn't work. I'd tell you about them, a I fear a non mathematician wouldn't understand it, haha."
+    e "Ah, just my own little theories on formal systems and completion. I have some ideas that seem really crazy, and now I am trying to find out why they wouldn't work. I'd tell you about them, but I fear a non mathematician wouldn't understand it, haha."
     l "Gee, thanks. And don't call yourself a mathematician yet! You just started studying."
     e "I am a mathematician at heart already. By the way, do you want to hear some rumors?"
     "To be honest, I really don't like rumors. Incomplete or untrustworthy information makes me uncomfortable. But Emi loves them, and I don't think she has many other friends at university, so I can't really reject her."
@@ -182,8 +188,11 @@ label Hallway:
     jump Lecture1
 
 label BadEnd1:
-    scene bg office
+    scene black with slowfade
+    centered "20 years later..."
+    scene bg office with slowfade
     "*click click click*"
+    "..."
     "*click click click*"
     "Ugh... I wonder wonder when I can go home? It's already past eight... but I can't leave until I've finished this report on the sales of the last quartal. Well, at least this job pays well."
     "*ring ring*"
@@ -204,6 +213,7 @@ label BadEnd1:
     "Why do I feel so empty? I feel like there is something I have forgotten about... Whatever it was, it's too late now. I should just get back to work, so I can catch some sleep at home."
 
     "*click click click*"
+    "..."
     "*click click click*"
 
     jump game_over
@@ -368,9 +378,9 @@ label battleship:
     "Time has passed."
 
     l "I've hit all of his ships except the last part of one of his destroyers."
-    l "It could be on A3 or A7. If I hit it, I'll win"
+    l "It could be on A3 or A7. If I hit it, I'll win."
     l "But if I miss, Richard will be able to eliminate my last submarine."
-    l "I need to make a decision now"
+    l "I need to make a decision now."
 
 menu:
     "I shoot the field A3":
@@ -405,30 +415,30 @@ label lightsoff:
     l "Maybe the bulb died"
     r "No, I bought it from a passionate engineer, who builds them on his own."
     r "The bulb should last longer than the sun."
-    r "It must be a blackout. Just look out of the window"
-    r "Everything is dark. It seems to be city wide"
+    r "It must be a blackout. Just look out of the window."
+    r "Everything is dark. It seems to be city wide."
     r "I am sorry, but you have to leave."
-    r "Chances like this do not present themselves very often"
+    r "Chances like this do not present themselves very often."
     l "What are you talking about?"
-    r "I can't tell you anything now"
-    r "Meet me tomorrow at the Mariahilferstraße near Neubaugasse at 2pm"
+    r "I can't tell you anything now."
+    r "Meet me tomorrow at the Mariahilferstraße near Neubaugasse at 2pm."
     l "Ok..."
     jump Home1
 
 label Home1:
-    scene home
+    scene l
     "Ahh, finally home."
     "This blackout is unusually long and seems to affect the entire city."
     "I had to walk by foot, since the trains were stopped."
     "Man, it was chaotic out there..."
     "Everyone was in confusion."
-    "Fortunately, I have a flashlight on my phone"
+    "Fortunately, I have a flashlight on my phone."
     "Otherwise, I'm not sure if I'd found my way home."
     "But the blackout is over now."
     "I surely can't sleep now."
-    "I'm way too curious about what's going on with Richard"
+    "I'm way too curious about what's going on with Richard."
     "What did he suddenly have to do?"
-    "Maybe I could cool down a bit by browsing the web"
+    "Maybe I could cool down a bit by browsing the web."
     "*click*--PC boots"
     "Ok, step by step: First I enter Mr. Braun's Wifi..."
     "*click*--connected"
@@ -454,7 +464,7 @@ label Home1:
     "Oh right, people on this network see when I am online."
     l "Hello"
     e "Did you notice the blackout?"
-    l "Yes, I did"
+    l "Yes, I did."
     e "Very mysterious..."
     l "Not really, that happens about every 5 years."
     e "It was the whole city! That has not happened in at least 50 years..."
@@ -576,7 +586,7 @@ label wien_energie:
     "..."
 
     "And she's gone."
-    hide emi with transition
+    hide emi
     "Well, let's see. There is nothing here."
     "I can't go over the fences, and I see no one I could talk to."
     "Time for browsing the internet on my phone."
@@ -584,7 +594,7 @@ label wien_energie:
     "The news say that the blackout happened because a few employees messed up at inconvenient times."
     "Just the kind of thing I expected. But I don't think Emi will believe the news."
     "Ah, she's coming back."
-    show emi alt happy with transition
+    show emi alt happy
     e "Did you find anything?"
     l "No, how should I? Access is restricted."
     e "Too bad... I had hoped you somehow managed to learn anything anyway."
@@ -651,11 +661,11 @@ label wien_energie:
 
     menu: 
         "Go":
-            $ graveyard_talk_richard = true;
+            $ graveyard_talk_richard = True;
             jump go
 
         "Let him be":
-            $ graveyard_talk_richard = false;
+            $ graveyard_talk_richard = False;
             jump let_him_be
 
 
@@ -787,7 +797,7 @@ label home2:
         "Could it be?"
         "*click click click*"
         "..."
-        "Really... that is Professor Netroufal's gransfather. Who would have thought."
+        "Really... that is Professor Netroufal's grandfather. Who would have thought."
         "Thinking of it, didn't Richard mention the other Professors were worried about him?"
         "...maybe I should research him too."
         "..."
