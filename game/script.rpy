@@ -81,9 +81,9 @@ init:
 label start:
     
     stop music fadeout 1
-    play music "music/graveyard.mp3" fadein 2
 
     scene wolken with slowfade
+    play music "music/graveyard.mp3" fadein 2
     l "Why?"
     l "Why is there anything, instead of nothing?"
     l "Why do I exist? Is there a purpose?"
@@ -196,9 +196,10 @@ label A12:
 label Hallway:
     stop music fadeout 2
     scene black with slowfade
+
     centered "Seven years later..."
     scene bg hallway with slowfade
-    play music "music/happy.mp3" fadein 2
+    play music "music/science.mp3" fadein 2
     "I wonder how many weeks it has been now since I joined university? It must be at least eight. I think I am slowly getting used to it here."
     "It is definitely better than school. Finally I can decide by myself what classes I want to attend..."
     "This way, I can fully concentrate on my future. I just hope I don't drop out..."
@@ -241,6 +242,7 @@ label Hallway:
 label BadEnd1:
     stop music fadeout 2
     scene black with slowfade
+    play music "music/happy.mp3" fadein 2
     centered "20 years later..."
     scene bg office with slowfade
     "*click click click*"
@@ -259,10 +261,14 @@ label BadEnd1:
     ra "Great! Then we'll just call each other tomorrow, alright?"
     l "Yeah. Until then."
     ra "Bye."
-
+    
+    stop music fadeout 2
     "..."
     "......"
+
     "........."
+
+    play music "music/graveyard.mp3" fadein 2
 
     "Why do I feel so empty? I feel like there is something I have forgotten about..."
     "Whatever it was, it's too late now. I should just get back to work, so I can catch some sleep at home."
@@ -296,7 +302,7 @@ label Lecture1:
     l "Really? Me too!"
     "I like to sit in the last row, where nobody is behind me who could see me. I'm uncomfortable when a lot of people can watch me, even if I'm not at the center of attention."
     r "Aha! I see we are alike! Truly, the first row is the best. I can't stand having to see so many other people in front of me."
-    "Well..."
+    r "Well..."
     r "It simply disgusts me, you know. Most young people are a disgrace to mankind."
     r "All they think about is how they need to have the newest phone, watch TV, repeat what is told to them by the media, and so on."
     r "But the worst thing is, they are lazy. They don't have a goal to accomplish. They aren't alive, they just live."
@@ -314,12 +320,19 @@ label Lecture1:
     r "The opposite is true! I admire you for your vigilence! You try to do the impossible, because it is your dream. There is nothing foolish in that."
     "Wow, that is the most motivating thing anyone ever said to me. Everyone else always tried to tell me I should do something normal..."
     show richard alt neutral
-    "Anyway, the lecture seems to start. We can talk later."
+    
+    r "I like your style. What say you, do you want to visit my place later today, in order to test our intellect and wits against each other in a game?"
+    "I don't have anything else planned tonight."
+    l "Sure, why not."
+    r "Marvelous! I will tell you where I live after the lecture is over. Speaking of which, it seems to start now."
+
+    
+
     jump Lecture2
 
 label Lecture2:
     stop music fadeout 2
-    scene lecture speak with fade
+    scene lecture speak with slowfade
     play music "music/science.mp3" fadein 2
     show professor regular
     n "Hello everyone. My name is Professor Dr. Dr. Netroufal. But you can just call me Professor Dr. Netroufal. Ahaha."
@@ -360,8 +373,11 @@ menu:
         jump StreetEmi
 
 label StreetRichard:
-    scene bg street
+    stop music fadeout 2
+    scene bg street with slowfade
     show richard happy
+    play music "music/happy.mp3" fadein 2
+
     r "Oh, hello Ludwig. Did you catch the professor?"
     l "Hi Richard. No, too many wanted to talk to him. After the first three people, he just went to his office."
     r "What a shame. If you want, we can go right to my place and battle each other."
@@ -381,8 +397,10 @@ label StreetRichard:
     jump HomeRichard
 
 label StreetEmi:
-    scene bg street
+    stop music fadeout 2
+    scene bg street with slowfade
     show emi happy
+    play music "music/happy.mp3" fadein 2
     e "Hey Ludwig."
     l "Hey Emi. How was your math lecture?"
     e "Very interesting. Our professor Dr. Steinmeier spoke about randomness and if it could really occur measurably to a larger scale than quanta. It got a little bit philosophical but his opinion is that there is no randomness in math and therefore no randomness in the real world. I brought up the Chaos theory and he said that it only seems random to us and that by knowing all the information about the system from an outside view, it could be predicted perfectly. I argued that we will never be able to do that and and therefore it doesn't matter and is in fact random to us. He replyed with a smile on his face: It is not about us, it never has been. It is about the fact that all the information only leads to one possible outcome, which is already determined and we are only part of a program that is following its rules until it's completion."
@@ -397,9 +415,15 @@ label StreetEmi:
     jump HomeRichard
 
 label HomeRichard:
-    scene richard room
+    stop music fadeout 2
+    scene richard room  with slowfade
     show richard at left
     
+    play music "music/science.mp3" fadein 2
+
+
+
+
     r 'Welcome to my home. I am very sorry for the mess, but I did not have enough time to tidy it up.'
     
     hide richard
@@ -440,8 +464,10 @@ label nodrink:
 #battleships
 
 label battle:
-    scene richard room
+    stop music fadeout 2
+    scene richard room  with slowfade
     show richrad ragular at left
+    play music "music/happy.mp3" fadein 2
     r "Now, we are ready for an epic battle of intellect." 
     r "A one on one in an ancient competition that the smartest brains of all cultures play to determine the very best." 
     r "In world championships, the best player in the world is able to defeat all his opponents and crown himself as king." 
@@ -459,15 +485,17 @@ menu:
 label battleship:
     hide richard
     show richrad happy at left
-
     r "Ahaha, good joke buddy"
     r "I am of course talking about Battleship!"
     r "Let's start!"
     
-    hide richard
-    "..."
-    "Time has passed."
+    stop music fadeout 2
+    scene black with slowfade
+    centered "17 minutes later"
 
+    scene richard room
+    show richard dreamy at center
+    play music "music/science.mp3" fadein 2
     l "I've hit all of his ships except the last part of one of his destroyers."
     l "It could be on A3 or A7. If I hit it, I'll win."
     l "But if I miss, Richard will be able to eliminate my last submarine."
@@ -481,7 +509,6 @@ menu:
         
 label A3:
     $ battleshipwon = False
-    show richard
     r "The field A3 is occupied by..."
     r "Water, you have missed!"
     r "I shoot the field E7"
@@ -492,7 +519,6 @@ label A3:
 
 label A7:
     $ battleshipwon = True
-    show richard
     r "The field C4 is occupied by..."
     r "...the last part of my last destroyer, you have won!"
     r "Congratulations! I am happy to finally have found a worthy opponent."
@@ -517,7 +543,9 @@ label lightsoff:
     jump Home1
 
 label Home1:
-    scene l
+    stop music fadeout 2
+    scene l with slowfade
+    play music "music/happy.mp3" fadein 2
     "Ahh, finally home."
     "This blackout is unusually long and seems to affect the entire city."
     "I had to walk by foot, since the trains were stopped."
@@ -573,7 +601,9 @@ label Home1:
     jump mariahilferstrasse
 
 label mariahilferstrasse:
-    scene hilfer
+    stop music fadeout 2
+    scene hilfer with slowfade
+    play music "music/science.mp3" fadein 2
     "I wonder what Richard was up to last night..."
     show richard neutral at right
     r "Hey Ludwig!"
@@ -609,9 +639,12 @@ label mariahilferstrasse:
 #Lukas
 #cafe 1
 label cafe1:
-    scene cafe
+    stop music fadeout 2
+    scene cafe with slowfade
     show emi happy at left
     show richard regular at right
+    play music "music/happy.mp3" fadein 2
+
 
     e "I'm glad you reconsidered, Ludwig! Finally, I don't have to do this investigation on my own."
 
@@ -665,8 +698,10 @@ label cafe1:
 #wien einergie
 
 label wien_energie:
-    scene wien energie
+    stop music fadeout 2
+    scene wien energie with slowfade
     show emi alt regular at right
+    play music "music/science.mp3" fadein 2
 
     l "We are here. What now? It's not like we can just look at the facility and find out what caused the blackout."
     e "We can't?"
@@ -766,7 +801,7 @@ label zentralfriedhof:
 
 
 label go:
-    scene boltzmann grab
+    scene boltzmann grab with slowfade
     show richard neutral at right
     "Let's see what he's doing there."
     "He looks so deep in thought, I don't want to say a word. Better just stand next to him."
@@ -830,10 +865,11 @@ label let_him_be:
 
 #cafe2
 label cafe2:
-    scene cafe 
+    stop music fadeout 2
+    scene cafe  with slowfade
     show emi alt regular at right
     show richard alt neutral at left
-
+    play music "music/happy.mp3" fadein 2
     e "Okay, let's do a status report. I'll start."
     e "The huge blackout seems to have actually been an accident. I got this information by someone who claims to be partially responsible."
     e "No one at the Central Cemetary had any valueable information about the loud sound."
@@ -860,7 +896,9 @@ label cafe2:
 
 #home2
 label home2:
-    scemce ludwig home
+    stop music fadeout 2
+    scene ludwig home with slowfade
+    play music "music/science.mp3" fadein 2
     "So that whole thing didn't help us at all. But I wouldn't call it a waste of time. I had fun after all."
     "I will relax with some internet for the rest of the evening."
 
@@ -886,8 +924,12 @@ label home2:
         "..."
         "He founded the Austrian Mathematical Society? Emi will love to hear this."
         "..."
+        stop music fadeout 2
+ 
         "So he commited suicide while he was on vacation with his family..."
         "I can't imagine how hard the pressure from his colleagues must have been to drive him this far."
+
+        play music "music/graveyard.mp3" fadein 2
         "..."
         "Wait, what's this? One of his students was... Bernhard Netroufal?"
         "Could it be?"
@@ -918,6 +960,10 @@ label home2:
         jump bad_end_2
 
 label bad_end_2:
+    stop music fadeout 2
+    scene black with slowfade
+    play music "music/graveyard.mp3" fadein 2
+
     "I don't understand what is happening."
     "Two days have passed. Today, it was announced that Professor Netroufal is dead. Suicide, they say."
     "Nothing makes sense. I can't imagine a single reason why he would do something like this."
@@ -931,13 +977,17 @@ label bad_end_2:
 #following
 label following:
     scene home
+
     "I've got to tell the news to Emi and Richard. A group message will do."
 
     l "I found some information, meet me tomorrow at the usual café at 2pm."
 
-    scene cafe
+    stop music fadeout 2
+    scene cafe with slowfade
     show richard neutral at left
     show emi neutral at right
+    play music "music/happy.mp3" fadein 2
+ 
 
     l "Good news everyone! Yesterday I browsed the internet and randomly stumbled upon a thread about Boltzmann brains. And because of that, I thought I'd read about him. As it turns out he founded the Austrian Society of Mathematics"
     hide emi neutral
@@ -956,10 +1006,13 @@ label following:
 
     e "Neat!"
 
-    scene tu parking
+    stop music fadeout 2
+    scene tu parking with slowfade
     show emi neutral at left
     show richard neutral at right
 
+    play music "music/science.mp3" fadein 2
+ 
     l "OK, it is 5 past 7, he should come out come out within the next 30 minutes."
     r "Did anyone bring food? I am a bit hungry."
     l "I am afraid not."
@@ -968,18 +1021,30 @@ label following:
     e "More for me then..."
 
 
-    "30 min later:"
+    scene black with slowfade
+    centered "17 minutes later"
+
+    scene tu parking
+    show emi regular at left
+    show richard dreamy at right
 
     l "Still no sign of him, he might be talking to students right now..."
 
-    "10 min later:"
+    scene black with slowfade
+    centered "17 minutes later"
+
+    scene tu parking
+    show emi neutral at left
+    show richard neutral at right
 
     r "OK, I do not think he is leaving anytime soon, he should already be gone. The professor really doesn't seem to be that  kind of person that talks to students after class. I mean he ended his lecture we attended after just 5 minutes. I think we should go in now."
     l "You are probably right, let's go"
 
-    scene lecture
-    show emi neutral at right
+    stop music fadeout 2
+    scene lecture with slowfade
+    show emi regular at right
     show richard neutral at left
+    play music "music/happy.mp3" fadein 2
     r "Nothing. He is not speaking to students" 
     s "Hello, are you looking for something?"
     e "Hello Professor Steinmeier! Yes, we are looking for Professor Netroufal."
@@ -996,19 +1061,25 @@ label following:
     show emi happy at right
     e "Yay, university basement!"
 
-    scene basement_door
+    stop music fadeout 2
+    scene basement_door with slowfade
     show emi neutral at right
     show richard neutral at left
+    play music "music/science.mp3" fadein 2
 
     r "Do you hear that? Sounds like someone's actually in there."
     l "Wow, and I just wanted to see what it looks like down here..."
     l "Is the door locked?"
     l "Doesn't seem that way... weird. Let's go in."
 
-    scene confrontion
+    stop music fadeout 2
+    scene confrontion with slowfade
     show emi neutral at right
     show richard neutral at left
     show professor regular at center
+
+    play music "music/delusions.mp3" fadein 2
+
 
     r "Professor Netroufal! What are you doing?"
     n "What? How did you know I was in here?"
@@ -1049,10 +1120,13 @@ label following:
 
     r "This is madness! We can't let you continue."
     e "Right! Killing yourself in every world that is not like you want it? It's stupid, to say the   least."
-
+    stop music fadeout 2
     "This man... we share the same view on the universe. But he isn't afraid. He boldly goes forward to satisfy his infinite curiosity."
+    play music "music/graveyard.mp3" fadein 2
     "But is this really ok? Can I let him continue?"
+    
 
+ 
     menu:
         "Let him do it" :
             jump let_him
@@ -1076,7 +1150,10 @@ label let_him:
 
 label stop_him:
 
+    stop music fadeout 2
+
     l "Professor, there is another reason for this, am I right?"
+    play music "music/science.mp3" fadein 2
     n "What do you mean?"
     l "You continue now because you want to see the truth behind our existence."
     l "But when you first did the experiment..."
@@ -1109,10 +1186,13 @@ label stop_him:
 
 
 label mixed_feelings_end:
-    scene black
-    "It did not come as much of a surprise, but it was a shock still. Instead of giving his lecture, it was announced today that Professor Netroufal commited suicide."
+    stop music fadeout 2
+    scene black with slowfade
+    play music "music/graveyard.mp3" fadein 2
+    "It did not come as much of a surprise, but it was a shock still."
+    "Instead of giving his lecture, it was announced today that Professor Netroufal commited suicide."
 
-    scene cafe
+    scene cafe with slowfade
     show richard sad at right
     show emi sad at left
     
@@ -1130,9 +1210,14 @@ label mixed_feelings_end:
 
 label true_end:
 
-    scene cafe
+    stop music fadeout 2
+    scene cafe with slowfade
     show richard neutral at right
     show emi sad at center
+
+    play music "music/happy.mp3" fadein 2
+
+
     r "Such dedication... For a single person to kill themself in billions of worlds, in order to achieve their dream. Can it really be called dedication? Or isn't it just recklessness?"
     e "One thing is for certain. He is filled with madness. He does not care one bit for the conventional ways... how admirable."
     l "I wonder if he could have done it..."
