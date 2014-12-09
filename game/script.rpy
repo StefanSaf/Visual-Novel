@@ -7,7 +7,7 @@ init:
     image bg office = Image("pics/office.jpg")
     image bg street = Image("pics/street.jpg")
     image lecture = Image("pics/lecture.jpg")
-    image richard room = Image("pics/richard_room.jpg")
+    image rich home = Image("pics/richard_room.jpg")
     image hilfer = Image("pics/maria_hilfer_strasse.jpg")
     image friedhof graves = Image("pics/zentralfriedhof.jpg")
     image friedhof path = Image("pics/zentralfriedhof2.jpg")
@@ -28,16 +28,18 @@ init:
     image ludwig home = Image("pics/ludwig_home.jpg")
     image tu nacht = Image("pics/tu_nacht.jpg")
 
-    image emi sad = im.FactorScale("pics/emi_sad.png", 0.45)
-    image emi happy = im.FactorScale("pics/emi_happy.png", 0.45)
-    image emi neutral = im.FactorScale("pics/emi_neutral.png", 0.45)
-    image emi puzzled = im.FactorScale("pics/emi_puzzled.png", 0.45)
-    image emi regular = im.FactorScale("pics/emi_regular.png", 0.45)
-    image emi alt regular = im.FactorScale("pics/emi_alt_regular.png", 0.45)
-    image emi alt happy = im.FactorScale("pics/emi_alt_happy.png", 0.45)
-    image emi alt neutral = im.FactorScale("pics/emi_alt_neutral.png", 0.45)
-    image emi alt puzzled = im.FactorScale("pics/emi_alt_puzzled.png", 0.45)
-    image emi alt sad = im.FactorScale("pics/emi_alt_sad.png", 0.45)
+    image emi sad = im.FactorScale("pics/emi_sad.png", 0.42)
+    image emi happy = im.FactorScale("pics/emi_happy.png", 0.42)
+    image emi neutral = im.FactorScale("pics/emi_neutral.png", 0.42)
+    image emi puzzled = im.FactorScale("pics/emi_puzzled.png", 0.42)
+    image emi regular = im.FactorScale("pics/emi_regular.png", 0.42)
+    image emi angry = im.FactorScale("pics/emi_angry.png", 0.42)
+    image emi alt regular = im.FactorScale("pics/emi_alt_regular.png", 0.42)
+    image emi alt happy = im.FactorScale("pics/emi_alt_happy.png", 0.42)
+    image emi alt neutral = im.FactorScale("pics/emi_alt_neutral.png", 0.42)
+    image emi alt puzzled = im.FactorScale("pics/emi_alt_puzzled.png", 0.42)
+    image emi alt sad = im.FactorScale("pics/emi_alt_sad.png", 0.42)
+    image emi alt angry = im.FactorScale("pics/emi_alt_angry.png", 0.42)
     
 
     image emi young neutral = im.FactorScale("pics/emi_young_neutral.png", 0.45)
@@ -132,9 +134,20 @@ label start:
     hide emi young neutral
     show emi young angry
 
-    e "Because there is no mystery! It is useless to spend all your life thinking about something that is not there. The way this world works is simple. You are born, go to school, get a job, marry and get kids. Then the cycle restarts. See? There is no place for unneccasary questions. How does thinking about unsolvable questions improve your life?"
-    l "Imagine... you were thrown in a complex of white rooms. Together with people of all ages and races. None of them have any memories from before they appeared there, including you. The rooms provide everything you could possibly need in daily life. Do you really say there is no mystery in that? How is this different from reality?"
+    e "Because there is no mystery! It is useless to spend all your life thinking about something that is not there. "
+    e "The way this world works is simple. You are born, go to school, get a job, marry and have kids. "
+    e "Then the cycle restarts. See? There is no place for unneccasary questions. "
+    e "How does thinking about unsolvable questions improve your life?"
+    l "Ugh..."
+    l "Imagine... you were thrown in a complex of white rooms. "
+    l "Together with people of all ages and races. "
+    l "None of them have any memories from before they appeared there, including you. "
+    l "The rooms provide everything you could possibly need in daily life. "
+    l "Do you really say there is no mystery in that? How is this different from reality?"
+    show emi young neutral
     e "Hmm... you do have a point there. But still, how could you ever find the truth? It is simply not possible."
+    show emi young angry
+    e "And it's just weird! You are pushing everyone away with your abnormal behaviour."
 
 menu:
     "How do you know it's impossible?":
@@ -143,7 +156,10 @@ menu:
         jump A2
 
 label A1:
-    e "Recorded history goes back thousands of years. Many people have tried, but no one found any answers. Most of them were very depressed and had no life. They died sad, because they failed. The same will surely happen to you too, if you try the imposssible."
+    show emi young neutral
+    e "Recorded history goes back thousands of years. Many people have tried, but no one found any answers. "
+    e "Most of them were very depressed and had no life. They died sad, because they failed. "
+    e "The same will surely happen to you too, if you try the imposssible."
 menu:
     "I don't care":
         jump A11
@@ -151,11 +167,11 @@ menu:
         jump A12
 
 label A2:
-    hide emi young neutral
-    show emi young angry
 
     e "Of course you are! Look at everyone else, they are enjoying being outside. "
-    e "And what are you doing? You always lose yourself in your thoughts. Be it in school or outside, you never concentrate on anything!"
+    e "And what are you doing? You always lose yourself in your thoughts. "
+    e "Be it in school or outside, you never concentrate on anything!"
+    show emi young neutral
     e "Why can't you just be normal and talk to people?"
     l "I... never really thought about it."
     e "It's time for you to adopt, or you will forever be an outcast."
@@ -164,7 +180,6 @@ label A2:
         "You are right...":
             l "I really do behave weird, don't I? Maybe I should start being more normal..."
 
-            hide emi young angry
             show emi young happy
 
             e "Glad you came to your senses. Now come, the next lesson starts soon."
@@ -173,16 +188,17 @@ label A2:
 
         "Who cares?":
             l "An outcast? Who cares cares about that?"
-            l "What does it matter if society rejects me? I choose my own path. I'm sorry you don't like it, but that doesn't change my decision."
+            l "What does it matter if society rejects me? I choose my own path. "
+            l "I'm sorry you don't like it, but that doesn't change my decision."
          
-            hide emi young angry
             show emi young neutral
 
             e "Ahhh... you are hopelessly stubborn. You will see where this kind of attitude will get you."
             jump Hallway
     
 label A11:
-    l "It's still better than living the hollow life that you propose. I would much rather die having tried to pursue my ambition."
+    l "It's still better than living the hollow life that you propose. "
+    l "I would much rather die having tried to pursue my ambition."
     hide emi young angry
     show emi young neutral
     e "What a crazy person..."
@@ -246,7 +262,6 @@ label Hallway:
 label BadEnd1:
     stop music fadeout 2
     scene black with slowfade
-    play music "music/happy.mp3" fadein 2
     centered "20 years later..."
     scene bg office with slowfade
     "*click click click*"
@@ -266,13 +281,10 @@ label BadEnd1:
     l "Yeah. Until then."
     ra "Bye."
     
-    stop music fadeout 2
     "..."
     "......"
 
     "........."
-
-    play music "music/graveyard.mp3" fadein 2
 
     "Why do I feel so empty? I feel like there is something I have forgotten about..."
     "Whatever it was, it's too late now. I should just get back to work, so I can catch some sleep at home."
@@ -290,7 +302,8 @@ label Lecture1:
     play music "music/happy.mp3" fadein 2
     "This lecture is special, and one that I've particularly been looking forward to. The lecturer is Professor Dr. Dr. Netroufal."
     "He's been in universities abroad for a few years, and recently came back to Vienna. The subject is quantum mechanics."
-    "It usually doesn't start so early in the studies, but that is why this lecture is special. It is the Professors field of expertise, and it is sort of his 'welcome back' gift to us, the students."
+    "It usually doesn't start so early in the studies, but that is why this lecture is special. "
+    "It is the Professors field of expertise, and it is sort of his 'welcome back' gift to us, the students."
     "Anyway, I should find a seat. Damn, I should've come earlier, it's packed in here..."
     "Why is it in such a small room? I thought he was more popular..." 
     "The only free seat left is in the center row. I don't really like it there, but there's nothing I can do about it now."
@@ -304,16 +317,20 @@ label Lecture1:
     l "Yeah. Thanks."
     r "Man, I hate the center row."
     l "Really? Me too!"
-    "I like to sit in the last row, where nobody is behind me who could see me. I'm uncomfortable when a lot of people can watch me, even if I'm not at the center of attention."
+    "I like to sit in the last row, where nobody is behind me who could see me. "
+    "I'm uncomfortable when a lot of people can watch me, even if I'm not at the center of attention."
+    show richard happy
     r "Aha! I see we are alike! Truly, the first row is the best. I can't stand having to see so many other people in front of me."
-    r "Well..."
+    "Well..."
+    show richard alt neutral
     r "It simply disgusts me, you know. Most young people are a disgrace to mankind."
     r "All they think about is how they need to have the newest phone, watch TV, repeat what is told to them by the media, and so on."
     r "But the worst thing is, they are lazy. They don't have a goal to accomplish. They aren't alive, they just live."
     l "I agree with you. Most of them are just annoying."
     show richard happy
     
-    r "Oho! You share my views! This is rare. That must mean that you are different... Say, do you have a dream?"
+    r "Oho! You share my views! This is rare. That must mean that you are different... "
+    r "Say, do you have a dream?"
     l "I guess you could say that. I want to solve the mystery of existence."
     show richard alt neutral
     r "You mean... answering the fundamental questions mankind has been asking for millenia?"
@@ -321,16 +338,17 @@ label Lecture1:
     r "You attempt to do what the most brilliant minds humanity had to offer failed at?"
     l "You think it's foolish, don't you?"
     show richard alt happy
-    r "The opposite is true! I admire you for your vigilence! You try to do the impossible, because it is your dream. There is nothing foolish in that."
-    "Wow, that is the most motivating thing anyone ever said to me. Everyone else always tried to tell me I should do something normal..."
-    show richard alt neutral
+    r "The opposite is true! I admire you for your vigilence! "
+    r "You try to do the impossible, because it is your dream. There is nothing foolish in that."
+    "Wow, that is the most motivating thing anyone ever said to me. "
+    "Everyone else always tried to tell me I should do something normal..."
     
     r "I like your style. What say you, do you want to visit my place later today, in order to test our intellect and wits against each other in a game?"
     "I don't have anything else planned tonight."
     l "Sure, why not."
-    r "Marvelous! I will tell you where I live after the lecture is over. Speaking of which, it seems to start now."
-
-    
+    r "Marvelous! I will tell you where I live after the lecture is over. "
+    show richard neutral
+    r "Speaking of which, it seems to start now."
 
     jump Lecture2
 
@@ -365,7 +383,7 @@ label Lecture2:
 
     show professor alt surprised
      
-    n "Does it need humans? Does consciosness play a role in the laws of physics? Or is a single photon hitting it enough?"
+    n "Does it need humans? Does consciousness play a role in the laws of physics? Or is a single photon hitting it enough?"
 
     show professor alt regular
 
@@ -407,7 +425,8 @@ label Lecture2:
     hide professor
 
     "What an interesting lecture. But pretty short... "
-    "I'd like to ask him some questions. But appearently so do many others. Should I try to go and talk to him?"
+    "I'd really like to ask him some questions. But appearently so do many others. "
+    "Should I try to go and talk to him?"
 
 menu:
     "Yes":
@@ -438,9 +457,11 @@ label StreetRichard:
     show richard neutral
 
     r "I honestly am not sure if this is the right direction for me. I changed studies three times now."
-    r "Jura, logic, medicine... They all couldn't ignite the spark in me to get me burning. I still haven't found my true passion,"
-    r "which is what I really want: finding something that truly fulfills me. Something I can get lost in."
-    r "Work that I truly love. Sadly this is not easy to come by. I do not have a dream like you do. So I keep on searching, until I find it."
+    r "Law, logic, medicine... They all couldn't ignite the spark in me to get me burning. I still haven't found my true passion,"
+    r "Which is what I really want: finding something that truly fulfills me. Something I can get lost in."
+    r "Work that I truly love. Sadly this is not easy to come by. "
+    show richard alt neutral
+    l "I do not have a dream like you do. So I keep on searching, until I find it."
     r "I must admit, I envy you for already having found yours."
     l "I am sure that you will find your dream soon enough."
     r "I hope so."
@@ -488,7 +509,7 @@ label StreetEmi:
     e "Anyway, I have to get going now. It was nice chatting with you!"
     l "Yeah, likewise. Bye."
 
-    scene black with fade
+    scene black with slowfade
 
     "After walking for a few more minutes, I arrived at Richard's home."
         
@@ -496,11 +517,8 @@ label StreetEmi:
 
 label HomeRichard:
 
-    stop music fadeout 2
-    scene richard room  with slowfade
+    scene rich home with slowfade
     show richard happy
-    
-    play music "music/science.mp3" fadein 2
 
     r 'Welcome to my home. I am very sorry for the mess, but I did not have enough time to tidy it up.'
     
@@ -511,7 +529,7 @@ label HomeRichard:
     
     show richard happy
     
-    r "Thank you for accepting my invitation. I do not often have guests. Do you want something to drink? I've got Orange juice, beer, wine and water."
+    r "Do you want something to drink? I've got Orange juice, beer, wine and water."
     
 menu:
     "Orange juice, please.":
@@ -543,10 +561,7 @@ label nodrink:
 
 label battle:
 
-    stop music fadeout 2
-    scene richard room  with slowfade
-    show richrad neutral at left
-    play music "music/happy.mp3" fadein 2
+    show richard neutral
     r "Now, we are ready for an epic battle of intellect." 
 
     show richard dreamy
@@ -555,7 +570,7 @@ label battle:
     r "In world championships, the best player in the world is able to defeat all his opponents and crown himself as king." 
     r "Only those who can put themselves into someone else's mind and understand their opponent's train of thought will have a chance to win." 
 
-    show richard happy
+    show richard neutral
 
     r "Do you know what I am talking about?"
     
@@ -569,6 +584,8 @@ menu:
     
 label battleship:
 
+    show richard happy
+
     r "Ahaha, good joke buddy"
     r "I am of course talking about Battleship!"
     r "Let's start!"
@@ -576,7 +593,7 @@ label battleship:
     stop music fadeout 2
     scene black with slowfade
     centered "17 minutes later"
-    scene richard room with slowfade
+    scene rich home with slowfade
     show richard dreamy at center
     play music "music/science.mp3" fadein 2
 
@@ -618,6 +635,7 @@ label A7:
     
 label lightsoff:
     scene black
+    stop music
     r "What happened?"
     l "Maybe the bulb died."
     r "No, I bought it from a passionate engineer, who builds them on his own."
@@ -636,7 +654,7 @@ label lightsoff:
 label Home1:
 
     stop music fadeout 2
-    scene l with slowfade
+    scene ludwig home with slowfade
     play music "music/happy.mp3" fadein 2
 
     "Ahh, finally home."
@@ -706,7 +724,7 @@ label mariahilferstrasse:
     stop music fadeout 2
     scene hilfer with slowfade
     play music "music/science.mp3" fadein 2
-    "I wonder what Richard was up to last night..., and what he's going to tell me..."
+    "I wonder what Richard was up to last night... and what he's going to tell me..."
     show richard happy
     r "Hey Ludwig!"
     l "Hey Richard."
@@ -964,7 +982,7 @@ label zentralfriedhof:
 
 label go:
     scene friedhof boltzmann with fade
-    show richard alt neutral at right
+    show richard alt neutral
 
     "Let's see what he's doing there."
     "He looks so deep in thought, I don't want to say a word. Better just stand next to him."
@@ -1055,7 +1073,7 @@ label cafe2:
 
     stop music fadeout 2
     scene cafe  with slowfade
-    show emi alt regular at right
+    show emi alt regular
     show richard alt neutral at right
     play music "music/happy.mp3" fadein 2
     e "Okay, let's do a status report. I'll start."
@@ -1181,8 +1199,8 @@ label following:
 
     stop music fadeout 2
     scene cafe with slowfade
-    show richard alt neutral at left
-    show emi regular at right
+    show richard alt neutral at right
+    show emi regular
     play music "music/happy.mp3" fadein 2
 
 
@@ -1217,8 +1235,10 @@ label following:
 
     e "Neat!"
 
+    stop music fadeout 2
     scene tu nacht with slowfade
     show emi regular at left
+    play music ("music/science.mp3") fadein 2
     show richard neutral at right
 
     l "OK, it is five past seven, he should come out come out within the next 30 minutes."
@@ -1231,8 +1251,6 @@ label following:
     show emi happy at left
     e "More for me then..."
 
-
-<<<<<<< HEAD
     scene black with fade
     hide emi happy at left
     hide richard alt neutral at right
@@ -1294,7 +1312,7 @@ label following:
     e "Yay, university basement time!"
 
     stop music fadeout 2
-    scene basement_door with slowfade
+    scene basement door with slowfade
 
     show emi alt neutral at right
     show richard neutral at left
@@ -1305,12 +1323,12 @@ label following:
     l "Doesn't seem that way... weird. Let's go in."
 
     stop music fadeout 2
-    scene confrontion with slowfade
+    scene confrontation with slowfade
     show emi neutral at right
     show richard neutral at left
     show professor surprised at center
 
-    play music "music/delusions.mp3" fadein 2
+    play music "music/delusion.mp3" fadein 2
 
 
     r "Professor Netroufal! What are you doing?"
@@ -1331,12 +1349,15 @@ label following:
     r "You mentioned something like this in your lecture. Didn't you say it was only  theoretical?"
 
     n "I did. And it is. Because no reasonable scientist would accept a proof like this. "
+    show professor regular
     n "You see, this apparatus here creates a quantum event with two possible outcomes."
     n "According to Everett, this creates two seperate realities which stand in superposition. "
     n "It is connected to this machine gun. Whe-"
     show emi angry at right
     e "A machine gun?! Are you insane? Where did you get that from?"
+    show professor alt surprised
     n "Yes, I am. Surprised you didn't notice. "
+    show professor alt regular
     n "And I stole it. Now if you let me continue... "
     show emi neutral at right
     n "When the quantum measurement is 1, the gun fires. If it is 0, it doesn't. This is done once per second."
@@ -1403,7 +1424,7 @@ label following:
 label let_him:
     
     play music "music/graveyard.mp3" fadein 2
-    l "Let him do it"
+    l "Let him do it."
     e "What? Have you gone crazy too?"
     l "He already made up his mind. He found his path to the true nature of reality. "
     show emi neutral at right
@@ -1429,7 +1450,7 @@ label let_him:
 label stop_him:
     
     play music "music/graveyard.mp3" fadein 2
-    show emi neutral at left
+    show emi neutral at right
     l "Professor, there is another reason for this, am I right?"
     show professor regular at center
     n "What do you mean?"
@@ -1445,14 +1466,14 @@ label stop_him:
     n "You are right... again. Haha. "
     show professor sad at center
     n "I didn't even want to admit it to myself, but I guess I have to look the truth in the eyes."
-    show richard alt neutral at right 
+    show richard alt neutral at left
     r "So you actually wanted to die?"
     n "Yes, a part of me certainly wanted to die. "
     n "The other part wanted the experiment to succeed. "
     n "It was a win-win situation if you think about it, really."
     show emi alt puzzled at left
     e "But why?"
-    show emi alt neutral at left
+    show emi alt neutral at right
     show professor alt regular at center
     n "My ideas about the universe are grand. My imagination goes beyond that of the regular person. "
     show professor alt sad at center
@@ -1469,7 +1490,7 @@ label stop_him:
     n "That's why I wanted to show them, show to myself, that reality is stranger than human imagination."
     show professor sad at center
     n "And should I have failed... it wouldn't have mattered anymore."
-    show richard neutral at right
+    show richard neutral at left
     r "I am sorry. We didn't know about your hardships. "
     r "But you understand why we can't let you continue, right?"
     show professor regular at center
@@ -1481,7 +1502,7 @@ label stop_him:
     n "There are near infinite worlds, and this happens to be one in which I am stopped. I accept that."
     n "It's just like the inflation field. Ahahah."
     "What does he mean? Well, it doesn't really matter."
-    show emi alt regular at left
+    show emi alt regular at right
     l "Glad you came to your senses, Professor Netroufal."
 
     scene black with slowfade
@@ -1573,14 +1594,29 @@ label true_end:
     show emi alt happy 
     show richard alt neutral at right
     e "That is very wise of you, Professor N."
-    show professor alt regular
+    show professor alt regular at left
     n "What, is Netroufal too long for you to say?"
     show emi alt regular
     e "Nah, but it sounds more mysterious. I think it fits you better."
     n "Hmm... you think so?"
     show richard alt dreamy at right
+    "This might be my chance..."
+    "Now I can ask him my question, which I couldn't get to do after the lecture."
+    show emi alt regular
+    l "Ehm... Professor Netroufal? There is something I've been meaning to ask you..."
+    show professor regular at left
+    n "Yes? What is it?"
+    l "You are a {i}theoretical{/i} physicist, right?"
+    n "That's right."
+    l "Then, why are you wearing a lab coat?"
+    show professor alt regular at left
+    n "What do you mean?"
+    n "Sorry, I don't understand your question."
+    l "Huh?"
+    show richard alt neutral at right
     r "You were driven enough into a corner to risk your own life... "
     show professor regular at left
+    "But... even outside... why?"
     r "...and now that we stopped you from your last chance to fulfill your dream, you still don't give up?"
     r "You don't even seem to be distressed about it... Truly, strong dreams create stong men."
 
@@ -1600,7 +1636,7 @@ label true_game_over:
     stop music fadeout 2
     scene black with slowfade
     
-    play sound ("music/walls.mp3")
+    play music ("music/walls.mp3")
 
     show good credits:
         xpos 0 ypos 0 xanchor 0 yanchor 0
@@ -1614,7 +1650,7 @@ label game_over:
     stop music fadeout 2
     scene black with slowfade
     
-    play sound ("music/repitition.mp3")
+    play music ("music/repitition.mp3")
 
     show bad credits:
         xpos 0 ypos 0 xanchor 0 yanchor 0
