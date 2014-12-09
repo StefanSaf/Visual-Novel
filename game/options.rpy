@@ -290,6 +290,23 @@ init -1 python hide:
 
     #########################################
     ## More customizations can go here.
+    #Code for customizing the in-game menu choices
+
+    ##Code for customization of choice BG
+    #style.menu_choice_button.background = Frame("FILE NAME HERE",28,9)  
+    #style.menu_choice_button.hover_background = Frame("FILE NAME HERE",28,9)
+    style.menu_choice_button.background = "#1D2F3EC0"
+    style.menu_choice_button.hover_background = "#80B5A7C0"
+    #style.menu_choice_button.yminimum = 30
+    
+    ##Code for customization of text in the choice button
+    style.menu_choice.color = "#fff"
+    #style.menu_choice.size = 18
+    #style.menu_choice.outlines = [(2, "#000", 0, 0)]
+    style.menu_choice.hover_color = "#000"
+    #style.menu_choice.hover_outlines = [(2, "#000", 0, 0)]
+
+    style.window.background = "#1D2F3ED5"
 
 
 ## This section contains information about how to build your project into

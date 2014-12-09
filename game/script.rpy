@@ -72,12 +72,13 @@ init:
 
     # Declare characters used by this game.
     $ l = Character('Ludwig', color = "#c8ffc8")
-    $ e = Character('Emi', color = "#C8FFC8")
-    $ r = Character('Richard', color = "#C8FFC8")
-    $ n = Character('Netroufal', color = "#C8FFC8")
-    $ ra = Character('Raphael', color = "#C8FFC8")
+    $ e = Character('Emi', color = "#8762B4")
+    $ ey = Character('Emi', color = "#C67C50")
+    $ r = Character('Richard', color = "#CEC2B9")
+    $ n = Character('Netroufal', color = "#CBBE00")
+    $ ra = Character('Raphael', color = "#CD3333")
     $ fb = Character('Facebook', color = "#44619D")
-    $ s = Character('Steinmeier', color = "#44619D")
+    $ s = Character('Steinmeier', color = "#802A2A")
 
     #Transitions
     $ nextday = Fade(0.5, 2, 0.5)
@@ -116,28 +117,28 @@ label start:
     play music "music/happy.mp3" fadein 2
 
     l "Ahh..."
-    e "Hey Ludwig, what are you spacing out about?"
+    ey "Hey Ludwig, what are you spacing out about?"
     l "Huh? Oh, it's you Emi."
-    e "You didn't even see me coming? Where are you with your mind?"
+    ey "You didn't even see me coming? Where are you with your mind?"
     l "Ehm... Nowhere... I was just thinking about some things."
-    e "Like what? How you can concentrate better at school?"
+    ey "Like what? How you can concentrate better at school?"
     l "No! Just... about the meaning of existence."
-    e "The existence of what?"
+    ey "The existence of what?"
     l "Me, the universe,... everything."
 
     hide emi young regular
     show emi young neutral
 
-    e "Huh? What for? It's pointless."
+    ey "Huh? What for? It's pointless."
     l "Pointless? Why?"
 
     hide emi young neutral
     show emi young angry
 
-    e "Because there is no mystery! It is useless to spend all your life thinking about something that is not there. "
-    e "The way this world works is simple. You are born, go to school, get a job, marry and have kids. "
-    e "Then the cycle restarts. See? There is no place for unneccasary questions. "
-    e "How does thinking about unsolvable questions improve your life?"
+    ey "Because there is no mystery! It is useless to spend all your life thinking about something that is not there. "
+    ey "The way this world works is simple. You are born, go to school, get a job, marry and have kids. "
+    ey "Then the cycle restarts. See? There is no place for unneccasary questions. "
+    ey "How does thinking about unsolvable questions improve your life?"
     l "Ugh..."
     l "Imagine... you were thrown in a complex of white rooms. "
     l "Together with people of all ages and races. "
@@ -145,9 +146,9 @@ label start:
     l "The rooms provide everything you could possibly need in daily life. "
     l "Do you really say there is no mystery in that? How is this different from reality?"
     show emi young neutral
-    e "Hmm... you do have a point there. But still, how could you ever find the truth? It is simply not possible."
+    ey "Hmm... you do have a point there. But still, how could you ever find the truth? It is simply not possible."
     show emi young angry
-    e "And it's just weird! You are pushing everyone away with your abnormal behaviour."
+    ey "And it's just weird! You are pushing everyone away with your abnormal behaviour."
 
 menu:
     "How do you know it's impossible?":
@@ -157,9 +158,9 @@ menu:
 
 label A1:
     show emi young neutral
-    e "Recorded history goes back thousands of years. Many people have tried, but no one found any answers. "
-    e "Most of them were very depressed and had no life. They died sad, because they failed. "
-    e "The same will surely happen to you too, if you try the imposssible."
+    ey "Recorded history goes back thousands of years. Many people have tried, but no one found any answers. "
+    ey "Most of them were very depressed and had no life. They died sad, because they failed. "
+    ey "The same will surely happen to you too, if you try the imposssible."
 menu:
     "I don't care":
         jump A11
@@ -168,13 +169,13 @@ menu:
 
 label A2:
 
-    e "Of course you are! Look at everyone else, they are enjoying being outside. "
-    e "And what are you doing? You always lose yourself in your thoughts. "
-    e "Be it in school or outside, you never concentrate on anything!"
+    ey "Of course you are! Look at everyone else, they are enjoying being outside. "
+    ey "And what are you doing? You always lose yourself in your thoughts. "
+    ey "Be it in school or outside, you never concentrate on anything!"
     show emi young neutral
-    e "Why can't you just be normal and talk to people?"
+    ey "Why can't you just be normal and talk to people?"
     l "I... never really thought about it."
-    e "It's time for you to adopt, or you will forever be an outcast."
+    ey "It's time for you to adopt, or you will forever be an outcast."
 
     menu:
         "You are right...":
@@ -182,7 +183,7 @@ label A2:
 
             show emi young happy
 
-            e "Glad you came to your senses. Now come, the next lesson starts soon."
+            ey "Glad you came to your senses. Now come, the next lesson starts soon."
 
             jump BadEnd1
 
@@ -193,7 +194,7 @@ label A2:
          
             show emi young neutral
 
-            e "Ahhh... you are hopelessly stubborn. You will see where this kind of attitude will get you."
+            ey "Ahhh... you are hopelessly stubborn. You will see where this kind of attitude will get you."
             jump Hallway
     
 label A11:
@@ -201,7 +202,7 @@ label A11:
     l "I would much rather die having tried to pursue my ambition."
     hide emi young angry
     show emi young neutral
-    e "What a crazy person..."
+    ey "What a crazy person..."
     
     jump Hallway
     
@@ -209,7 +210,7 @@ label A12:
     l "No one before managed to do it, why should I? How silly of me."
     hide emi young angry
     show emi young happy
-    e "Glad you came to your senses. Now come, the next lesson starts soon."
+    ey "Glad you came to your senses. Now come, the next lesson starts soon."
     jump BadEnd1
 
 
