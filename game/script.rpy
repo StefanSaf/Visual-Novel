@@ -1472,7 +1472,7 @@ label stop_him:
     n "Yes, a part of me certainly wanted to die. "
     n "The other part wanted the experiment to succeed. "
     n "It was a win-win situation if you think about it, really."
-    show emi alt puzzled at left
+    show emi alt puzzled at right
     e "But why?"
     show emi alt neutral at right
     show professor alt regular at center
