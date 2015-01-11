@@ -98,7 +98,7 @@ label start:
     l "Is it all just a huge coincidence?"
     l "Is there really a past and future, or is the now the only thing?"
     l "..."
-    l "I don't know. I don't the answer to any of these questions."
+    l "I don't know. I don't know the answers to any of these questions."
     l "I don't even know if there is an answer, or if I could understand it."
     l "Most people would tell you that these are all questions for philosophers and theologists. But that doesn't help me."
     l "You see, I do not trust my own thoughts. Or the thoughts of others, no matter how trivial they seem."
@@ -119,7 +119,7 @@ label start:
     l "Ahh..."
     ey "Hey Ludwig, what are you spacing out about?"
     l "Huh? Oh, it's you Emi."
-    ey "You didn't even see me coming? Where are you with your mind?"
+    ey "You didn't even see me coming? Where did your mind go?"
     l "Ehm... Nowhere... I was just thinking about some things."
     ey "Like what? How you can concentrate better at school?"
     l "No! Just... about the meaning of existence."
@@ -137,7 +137,7 @@ label start:
 
     ey "Because there is no mystery! It is useless to spend all your life thinking about something that is not there. "
     ey "The way this world works is simple. You are born, go to school, get a job, marry and have kids. "
-    ey "Then the cycle restarts. See? There is no place for unneccasary questions. "
+    ey "Then the cycle restarts. See? There is no place for unnecessary questions. "
     ey "How does thinking about unsolvable questions improve your life?"
     l "Ugh..."
     l "Imagine... you were thrown in a complex of white rooms. "
@@ -188,7 +188,7 @@ label A2:
             jump BadEnd1
 
         "Who cares?":
-            l "An outcast? Who cares cares about that?"
+            l "An outcast? Who cares about that?"
             l "What does it matter if society rejects me? I choose my own path. "
             l "I'm sorry you don't like it, but that doesn't change my decision."
          
@@ -227,13 +227,13 @@ label Hallway:
     "My grades have always been good to average, but physics is really hard."
     "Wait, what am I thinking? I already decided that I will become a physicist! If I fail I'll try again."
     "How else am I supposed to learn the secret of the walls? What lies beyond them, and who constructed them for what purpose?"
-    "This is the future I have chosen.... , and I will see it through."
+    "This is the future I have chosen, and I will see it through."
     show emi happy at center
     e "Hey, Ludwig! Hi! We don't meet often between lectures, do we? Haha"
     l "Hi, Emi."
     "This is Emi. We've known each other for several years. We went to the same school for two years."
     "We got along, but I wouldn't say we were friends. When I had to change schools, we lost contact."
-    "But now she attends the same university as me, the TU Wien. I study physics, she math. We met by chance soon after we started, and quickly became friends. She changed quite a bit..."
+    "But now she attends the same university as me, the TU Wien. I study physics, she studies mathematics. We met by chance soon after we started, and quickly became friends. She changed quite a bit..."
     show emi regular at center
     e "What was that lecture you just came out of about?"
     l "Oh, it was about thermodynamics. An introduction to entropy. What did you have today?"
@@ -242,7 +242,7 @@ label Hallway:
     e "Ah, just my own little theories on formal systems and completion. I have some ideas that seem really crazy, and now I am trying to find out why they wouldn't work."
     hide emi regular
     show emi alt happy at center
-    e "I'd tell you about them, but I fear a non mathematician wouldn't understand them, haha."
+    e "I'd tell you about them, but I fear a non-mathematician wouldn't understand them, haha."
     l "Gee, thanks. And don't call yourself a mathematician yet! You just started studying."
     e "I am a mathematician at heart already. By the way, do you want to hear some rumors?"
     "To be honest, I really don't like rumors. Incomplete or untrustworthy information makes me uncomfortable."
@@ -269,8 +269,8 @@ label BadEnd1:
     "..."
     "*click click click*"
     "Ugh..."
-    "I wonder wonder when I can go home? It's already past eight..."
-    "But I can't leave until I've finished this report on the sales of the last quartal. Well, at least this job pays well."
+    "I wonder when I can go home? It's already past eight..."
+    "But I can't leave until I've finished this report on the sales of the last quarter. Well, at least this job pays well."
     "*ring ring*"
     "*pick up cell phone*"
     l "Hey Raphael, what's up?"
@@ -303,8 +303,8 @@ label Lecture1:
     play music "music/happy.mp3" fadein 2
     "This lecture is special, and one that I've particularly been looking forward to. The lecturer is Professor Dr. Dr. Netroufal."
     "He's been in universities abroad for a few years, and recently came back to Vienna. The subject is quantum mechanics."
-    "It usually doesn't start so early in the studies, but that is why this lecture is special. "
-    "It is the Professors field of expertise, and it is sort of his 'welcome back' gift to us, the students."
+    "This topic isn't usually taught this early in the studies, but that is why this lecture is special. "
+    "It's the professors' field of expertise, and it is sort of his 'welcome back' gift to us, the students."
     "Anyway, I should find a seat. Damn, I should've come earlier, it's packed in here..."
     "Why is it in such a small room? I thought he was more popular..." 
     "The only free seat left is in the center row. I don't really like it there, but there's nothing I can do about it now."
@@ -339,12 +339,12 @@ label Lecture1:
     r "You attempt to do what the most brilliant minds humanity had to offer failed at?"
     l "You think it's foolish, don't you?"
     show richard alt happy
-    r "The opposite is true! I admire you for your vigilence! "
+    r "The opposite is true! I admire you for your vigilance! "
     r "You try to do the impossible, because it is your dream. There is nothing foolish in that."
     "Wow, that is the most motivating thing anyone ever said to me. "
     "Everyone else always tried to tell me I should do something normal..."
     
-    r "I like your style. What say you, do you want to visit my place later today, in order to test our intellect and wits against each other in a game?"
+    r "I like your style. What so you say, do you want to visit my place later today, in order to test our intellect and wits against each other in a game?"
     "I don't have anything else planned tonight."
     l "Sure, why not."
     r "Marvelous! I will tell you where I live after the lecture is over. "
@@ -587,7 +587,7 @@ label battleship:
 
     show richard happy
 
-    r "Ahaha, good joke buddy"
+    r "Ahaha, good joke, buddy!"
     r "I am of course talking about Battleship!"
     r "Let's start!"
     
@@ -666,7 +666,7 @@ label Home1:
     "Fortunately, I have a flashlight on my phone."
     "Otherwise, I'm not sure if I would have found my way home."
     "But the blackout is over now."
-    "Usually I'd go right to bed, but I am way to worked up."
+    "Usually I'd go right to bed, but I am way too worked up."
     "I'm also curious about what's going on with Richard."
     "What did he suddenly have to do?"
     "Maybe I could cool down a bit by browsing the web."
@@ -676,7 +676,7 @@ label Home1:
     "Wouldn't want the NSA to know everything about me."
     "{i}*click*{/i}"
     "Alright, I am in stealth mode."
-    "I really don't want to be one of those citizens made of glass."
+    "I really don't want to be one of those see-through citizens."
     "Even if I have nothing to hide, there is no way I'll let any government or corporation know what I'm doing."
     "And since I can not trust closed sourced software, my entire computer is a freedom machine."
     "I'm running an obscure Linux distribution, with exclusively free software."
@@ -689,7 +689,7 @@ label Home1:
     "So what have people been up to?"
     fb "\"Melanie Bauer: My teacher tried to tell me that our sun was a star. So stupid, it is a sun, that's why its called sun and not star xD\""
     fb "\"12 people liked this\""
-    "Wow. Defriended."
+    "Wow. Unfriended."
     fb "\"Gustav Müller: My gf and me *_*\""
     "And that is of interest to anyone because...?"
     "..."
@@ -732,7 +732,7 @@ label mariahilferstrasse:
     "He is still wearing the same clothes as yesterday and looks terribly tired."
     "I'm sure he has not caught a lot of sleep last night."
     show richard neutral
-    r "I am sorry that I had to made you leave last night."
+    r "I am sorry that I had to make you leave last night."
     r "You know the feeling when you are somewhere in the countryside and there are hardly any lights, and you look up to the sky and realize its beauty?"
     r "In Vienna I miss this sight. Yesterday all the lights went out."
     show richard dreamy
@@ -745,7 +745,7 @@ label mariahilferstrasse:
     r "In the picture you get, you can see the stars forming circles around the spinning axis of earth."
     r "Getting a picture like that in Vienna is usually impossible. The city is way too bright."
     r "The motive is the most iconic place in Vienna, the Stephansdom."
-    r "It is just the most perfect picture that I have ever and will ever have taken."
+    r "It is just the most perfect picture that I have ever and will ever have take."
     show richard neutral
     r "I don't know if there was a picture like that before, it might be the best photo of the Stephansdom ever made."
     l "That sounds amazing. Can I see it?"
@@ -795,7 +795,7 @@ label cafe1:
     show emi regular
 
     e "Do you think he has the skills to join our team, Ludwig?"
-    l "Yes, I'm sure he will be able to provide valueable insight."
+    l "Yes, I'm sure he will be able to provide valuable insight."
     l "But shouldn't you ask him first if he even wants to?"
 
     r "Yeah, I would like to join you. This seems like it could become a great adventure..."
@@ -804,8 +804,8 @@ label cafe1:
     show richard happy
     e "Great! Now we just need a strategy. Let's think about what has happened."
     show emi neutral
-    e "Birds have been sighted flying in the wrong direction, en masse."
-    e "Also, various electronics were damaged or stopped working, for appearently no reason."
+    e "Birds have been seen flying in the wrong direction, en masse."
+    e "Also, various electronics were damaged or stopped working, for apparently no reason."
     l "I don't know much about biology or birds, but maybe a weather change urged them to change course?"
     show richard neutral
     r "Or maybe some evil organization is conducting experiments on the earths core, disrupting the magnetic field."
@@ -835,13 +835,13 @@ label cafe1:
     e "Ah, yes. About that, I did some quick research before I left the house."
     "So that's what kept her so long..."
     show emi alt regular
-    e "According to my sources, the epicenter of the sound was the central cemetary."
+    e "According to my sources, the epicentre of the sound was the central cemetery."
     show richard alt neutral
     l "The cemetery? Why there?"
     e "I don't know. That's why we should go there to check things out."
     r "I recommend that we split up."
     r "You two go to Wien Energie, while I do some investigating in the university."
-    r "After that we meet up at the central cemetary."
+    r "After that we meet up at the central cemetery."
     show emi regular
     e "Sounds like a plan."
     l "Alright, then let's go."
@@ -872,10 +872,10 @@ label wien_energie:
     "..."
     "And she's gone."    
     "Well, let's see. There is nothing here."
-    "I can't go over the fences, and I see no one I could talk to."
+    "I can't climb over the fences, and I see no one I could talk to."
     "Time for browsing the internet on my phone."
     "..."
-    "The news say that the blackout happened because a few employees messed up at inconvenient times."
+    "The news says that the blackout happened because a few employees messed up at inconvenient times."
     "Just the kind of thing I expected. But I don't think Emi will believe the news."
     "I can't really fault her for that though. It's not like I trust the media."
     "Ah, she's coming back."
@@ -900,7 +900,7 @@ label wien_energie:
     e "Sure."
     l "Well, you changed since then..."
     l "Back then you thought it was unreasonable to try to solve the big questions..."
-    l "You said that career was everything, and one should just try to be content with what he has."
+    l "You said that career was everything, and you should just try to be content with what you have."
     e "Oh, it is unreasonable. But I came to the conclusion that not everything has to be reasonable."
     l "How?"
     show emi neutral
@@ -915,7 +915,7 @@ label wien_energie:
     e "And then I thought, 'Maybe everything isn't already sorted out.'"
     e "'Maybe people who act abnormally in my view just don't agree with the views of others.'"
     e "'Maybe every view is valid in its own way.'"
-    e "'And, maybe, I shouldn't care so much about that, and let everyone be themself.'"
+    e "'And, maybe, I shouldn't care so much about that, and let everyone be themselves.'"
     show emi regular
     e "And as soon as I changed my own view of the world a little bit, I realized I really don't like the standard norm."
     show emi alt happy
@@ -1081,7 +1081,7 @@ label cafe2:
     show emi alt neutral
     e "The huge blackout seems to have actually been an accident. "
     e "I got this information by someone who claims to be partially responsible."
-    e "No one at the Central Cemetary had any valueable information about the loud sound."
+    e "No one at the Central Cemetery had any valuable information about the loud sound."
     l "I didn't really know what to look for, so I didn't find anything."
     show richard alt neutral
     r "Aside from some rumors, I found out that the blackout at the TU in the week before was at around the same time of day as the city wide one yesterday."
@@ -1093,7 +1093,7 @@ label cafe2:
     e "That does sound really suspicious. If someone caused the blackout deliberately, why would they start at the TU?"
     show emi neutral
     e "And that hypothesis is also conflicting with the information that I received."
-    l "Maybe the person you talked to lied? Or he was just part of a much more eleborate plan?"
+    l "Maybe the person you talked to lied? Or he was just part of a much more elaborate plan?"
 
     "I don't really believe that, it's most likely just a coincidence."
 
@@ -1120,7 +1120,7 @@ label home2:
     "But I wouldn't call it a waste of time. I had fun after all."
     "I will relax with some internet for the rest of the evening."
 
-    "Let's try the science bord." 
+    "Let's try the science board." 
 
     "\"Hello /sci/entists. I want to become immortal. What field of science should I study?\""
 
@@ -1134,7 +1134,7 @@ label home2:
 
     "Oh no, Boltzmann brains. They make me uncomfortable."
     "It's the idea that in an infinite equilibirum, it is more probable that your brain spontainiously pops into existence, instead of the entire universe existing."
-    "In other words, statistically, you and all of your memories are probably just a fluctuation within a gas, and will disapper after a few moments."
+    "In other words, statistically, you and all of your memories are probably just a fluctuation within a gas, and will disappear after a few moments."
 
     if graveyard_talk_richard:
 
@@ -1261,7 +1261,7 @@ label following:
     show richard neutral at right
 
     l "Still no sign of him, he might be talking to students right now..."
-    r "By the way, does anyone of you have a car with them?"
+    r "By the way, is anyone here with a car?"
     e "Nope."
     l "No, why?"
     show richard alt neutral at right
@@ -1282,7 +1282,7 @@ label following:
 
     e "Ok, I don't think he is leaving anytime soon, he should already be gone."
     "The professor really doesn't seem to be the kind of person that talks to students after class."
-    "I mean, soon his lecture we attended ended, he fled to his office."
+    "I mean, as soon as the lecture we attended ended, he fled to his office."
     l "You are probably right, let's go inside."
 
     scene lecture with slowfade
@@ -1306,7 +1306,7 @@ label following:
     e "Oh, so that's how it is. Thanks for the info."
     s "No problem. Good evening."
     show emi regular at right
-    e "Good evening"
+    e "Good evening."
     l "Well, let's try the basement."
     r "Ok."
     show emi happy at right
@@ -1394,7 +1394,7 @@ label following:
     n "The changes in the magnetic field also stopped my machine from working."
     n "And I can guess you know what the blackout did. "
     show professor happy at center
-    n "This machine... it is not just good for proving Everett right, it basically functions as an 'improbabable scenaria generator'."
+    n "This machine... it is not just good for proving Everett right, it basically functions as an 'improbable scenario generator'."
 
     l "I see... I think I understand what you are trying to achieve."
     show professor regular at center
@@ -1497,7 +1497,7 @@ label stop_him:
     show professor regular at center
     n "Yes, I understand. And it is alright. After all, I expected this to happen. "
     show professor happy at center
-    n "You coming here is also just a huge coincidence. But it is more probable than me continueing to survive my experiments."
+    n "You coming here is also just a huge coincidence. But it is more probable than me continuing to survive my experiments."
     n "In another world, I do continue, and hopefully reach my goal."
     show professor alt happy at center
     n "There are near infinite worlds, and this happens to be one in which I am stopped. I accept that."
@@ -1528,7 +1528,7 @@ label mixed_feelings_end:
     r "Such dedication... For a single person to kill themself in billions of worlds, in order to achieve their dream. "
     r "Can it really be called dedication? Or was it just recklessness?"
     show richard neutral at right
-    e "One thing is for certain. He was filled with madness. "
+    e "One thing is for certain. He must have been mad inside to continue with his experiment."
     e "He did not care one bit for the conventional ways... it is sad he is gone from this world."
     show emi neutral
     l "As far as we know, he is still alive, somewhere. It's as if he moved away. "
