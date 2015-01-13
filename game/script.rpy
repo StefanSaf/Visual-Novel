@@ -44,7 +44,6 @@ init:
 
     image emi young neutral = im.FactorScale("pics/emi_young_neutral.png", 0.45)
     image emi young angry = im.FactorScale("pics/emi_young_angry.png", 0.45)
-    #Neu
     image emi young regular = im.FactorScale("pics/emi_young_regular.png", 0.45)
     image emi young happy = im.FactorScale("pics/emi_young_happy.png", 0.45)
 
@@ -57,15 +56,15 @@ init:
     image richard alt happy = im.FactorScale("pics/richard_alt_happy.png", 0.45)
 
 
-    image professor happy = im.FactorScale("pics/professor_happy.png", 0.35)
-    image professor sad = im.FactorScale("pics/professor_sad.png", 0.35)
-    image professor regular = im.FactorScale("pics/professor_regular.png", 0.35)
-    image professor surprised = im.FactorScale("pics/professor_surprised.png", 0.35)
+    image professor happy = Image("pics/professor_happy.png")
+    image professor sad = Image("pics/professor_sad.png")
+    image professor regular = Image("pics/professor_regular.png")
+    image professor surprised = Image("pics/professor_surprised.png")
 
-    image professor alt happy = im.FactorScale("pics/professor_alt_happy.png", 0.35)
-    image professor alt sad = im.FactorScale("pics/professor_alt_sad.png", 0.35)
-    image professor alt regular = im.FactorScale("pics/professor_alt_regular.png", 0.35)
-    image professor alt surprised = im.FactorScale("pics/professor_alt_surprised.png", 0.35)
+    image professor alt happy = Image("pics/professor_alt_happy.png")
+    image professor alt sad = Image("pics/professor_alt_sad.png")
+    image professor alt regular = Image("pics/professor_alt_regular.png")
+    image professor alt surprised = Image("pics/professor_alt_surprised.png")
 
     image bad credits = Image("pics/bad_credits.png")
     image good credits = Image("pics/good_credits.png")
@@ -135,20 +134,30 @@ label start:
     hide emi young neutral
     show emi young angry
 
-    ey "Because there is no mystery! It is useless to spend all your life thinking about something that is not there. "
+    ey "Because there is no mystery! It is useless to spend all your life thinking about something that is not there."
     ey "The way this world works is simple. You are born, go to school, get a job, marry and have kids. "
     ey "Then the cycle restarts. See? There is no place for unnecessary questions. "
     ey "How does thinking about unsolvable questions improve your life?"
     l "Ugh..."
-    l "Imagine... you were thrown in a complex of white rooms. "
-    l "Together with people of all ages and races. "
-    l "None of them have any memories from before they appeared there, including you. "
-    l "The rooms provide everything you could possibly need in daily life. "
-    l "Do you really say there is no mystery in that? How is this different from reality?"
     show emi young neutral
-    ey "Hmm... you do have a point there. But still, how could you ever find the truth? It is simply not possible."
+    l "Imagine... you were thrown in a complex of white rooms."
+    l "There is nothing there, except for these rooms and what is inside of them. There is no exit."
+    l "You could call it a closed universe."
+    l "You are not alone, but together with people of all ages and races."
+    l "None of them have any memories from before they appeared there, including you."
+    l "The rooms provide everything you could possibly need in daily life."
+    l "You could of course live there until you die, probably even happily."
+    l "But... wouldn't you want to know what is behind these walls? Who put them there? For what purpose?"
+    l "Why does this construction exist? You could say that the answer to that question is not essential for life."
+    l "This is a hypothetical scenario of course, but is it really that distant from the reality we find ourself in?"
+    l "Do you really not want to know what's behind those walls?"
+    l "Can you really live without asking yourself what is behind this existence? "
+    ey "Eh? I don't really get what you mean... how would you even do that?"
+    ey "You want to know what's behind your existence? That's impossible!"
+    ey "Even if there was an answer, there is no way you could get to it."
     show emi young angry
-    ey "And it's just weird! You are pushing everyone away with your abnormal behaviour."
+    ey "And when will you ever stop being so abnormal? White rooms, huh? What does that have to do with anything?"
+    ey "You push everyone away with your crazy talk!"
 
 menu:
     "How do you know it's impossible?":
@@ -170,12 +179,12 @@ menu:
 label A2:
 
     ey "Of course you are! Look at everyone else, they are enjoying being outside. "
-    ey "And what are you doing? You always lose yourself in your thoughts. "
+    ey "And what are you doing? You always lose yourself in your thoughts, or talk about weird things."
     ey "Be it in school or outside, you never concentrate on anything!"
     show emi young neutral
-    ey "Why can't you just be normal and talk to people?"
+    ey "Why can't you just be like everyone else and socialize?"
     l "I... never really thought about it."
-    ey "It's time for you to adopt, or you will forever be an outcast."
+    ey "It's time for you to adopt, or you will be an outcast forever."
 
     menu:
         "You are right...":
@@ -304,7 +313,7 @@ label Lecture1:
     "This lecture is special, and one that I've particularly been looking forward to. The lecturer is Professor Dr. Dr. Netroufal."
     "He's been in universities abroad for a few years, and recently came back to Vienna. The subject is quantum mechanics."
     "This topic isn't usually taught this early in the studies, but that is why this lecture is special. "
-    "It's the professors' field of expertise, and it is sort of his 'welcome back' gift to us, the students."
+    "It's the professor's field of expertise, and it is sort of his 'welcome back' gift to us, the students."
     "Anyway, I should find a seat. Damn, I should've come earlier, it's packed in here..."
     "Why is it in such a small room? I thought he was more popular..." 
     "The only free seat left is in the center row. I don't really like it there, but there's nothing I can do about it now."
@@ -339,7 +348,7 @@ label Lecture1:
     r "You attempt to do what the most brilliant minds humanity had to offer failed at?"
     l "You think it's foolish, don't you?"
     show richard alt happy
-    r "The opposite is true! I admire you for your vigilance! "
+    r "The opposite is true! I admire you for your dedication! "
     r "You try to do the impossible, because it is your dream. There is nothing foolish in that."
     "Wow, that is the most motivating thing anyone ever said to me. "
     "Everyone else always tried to tell me I should do something normal..."
@@ -625,7 +634,7 @@ label A3:
 
 label A7:
     $ battleshipwon = True
-    r "The field C4 is occupied by..."
+    r "The field A7 is occupied by..."
     r "...the last part of my last destroyer, you have won!"
 
     show richard happy
@@ -684,18 +693,23 @@ label Home1:
     "So... What do people do when they browse the internet without a specific goal?"
     "Hmm..."
     "I could go to Facebook, it's been a while."
+    "Of course, Facebook is the worst regarding privacy and surveillance."
+    "But I don't use my real name, haven't uploaded any personal information, and generally don't past anything."
+    "I use it only for a few friends and family members."
     "..."
     "And I'm logged in."
     "So what have people been up to?"
     fb "\"Melanie Bauer: My teacher tried to tell me that our sun was a star. So stupid, it is a sun, that's why its called sun and not star xD\""
     fb "\"12 people liked this\""
     "Wow. Unfriended."
-    fb "\"Gustav Müller: My gf and me *_*\""
-    "And that is of interest to anyone because...?"
+    fb "\"Gustav Müller: My lunch today. I love sushi *_*\""
+    "Fascinating. Just how could I have gone to bed without knowing what he ate today?"
+    "Ugh."
     "..."
     "What's that image?"
     fb "\"You have been visited by the funny banana! Happiness will come to you and your family!\""
     fb "\"But ONLY if you repost this in the next 10 seconds!\""
+    "And in the trash it goes."
     "I remember now why it has been a while."
     fb "\"Emi has sent you a message!\""
     e "Hey!"
@@ -715,16 +729,16 @@ label Home1:
     e "Well, for example, I would start at the energy center, Wien Energie."
     l "I am sure you could just wait and read the newspaper tomorrow."
     e "As if they were honest..."
-    l "Meh"
+    l "Meh."
     e "Call me if you change your mind, alright?"
     l "Ok."
     jump mariahilferstrasse
 
 label mariahilferstrasse:
 
-    stop music fadeout 2
+ #   stop music fadeout 2
     scene hilfer with slowfade
-    play music "music/science.mp3" fadein 2
+ #   play music "music/happy.mp3" fadein 2
     "I wonder what Richard was up to last night... and what he's going to tell me..."
     show richard happy
     r "Hey Ludwig!"
@@ -760,7 +774,10 @@ label mariahilferstrasse:
     "And he could have gone home afterwards to catch some sleep..."
     "And he surely would have changed his clothes..."
     "Is he telling the truth?"
-    "*A loud sound comes from the sky*"
+    stop music
+    play sound "music/gammaray.wav"
+    centered " "
+    l "What was that?!"
     jump cafe1
 
 #Lukas
@@ -771,7 +788,7 @@ label cafe1:
     scene cafe with slowfade
     show emi happy
     show richard neutral at right
-    play music "music/happy.mp3" fadein 2
+    play music "music/science.mp3" fadein 2
 
 
     e "I'm glad you reconsidered, Ludwig! Finally, I don't have to do this investigation on my own."
@@ -1344,6 +1361,7 @@ label following:
     n "At least not in the traditional way."
     l "What do you mean by that?"
     n "You are bright kids, so you deserve to know. Ok, let me explain. "
+    "Huh? He's only seen Richard and me once, and he doesn't even know Emi... "
     show professor alt regular at center
     n "This here is an experiment that is able to prove the Everett interpretation of quantum  mechanics."
     show richard alt neutral at left
@@ -1515,9 +1533,9 @@ label stop_him:
 
 label mixed_feelings_end:
 
-    stop music fadeout 2
+#    stop music fadeout 2
     scene black with slowfade
-    play music "music/graveyard.mp3" fadein 2
+#    play music "music/graveyard.mp3" fadein 2
     "It did not come as much of a surprise, but it was a shock still."
     "Instead of giving his lecture, it was announced today that Professor Netroufal commited suicide."
 
@@ -1547,6 +1565,7 @@ label mixed_feelings_end:
 
 label true_end:
 
+    stop music fadeout 2
     scene cafe with slowfade
     show richard dreamy at right
     show emi neutral
@@ -1657,6 +1676,7 @@ label game_over:
         xpos 0 ypos 0 xanchor 0 yanchor 0
         linear 240.0 ypos -13021
     centered ""
+    centered "Try Again"
 
     stop music fadeout 1
     return

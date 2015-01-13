@@ -13,7 +13,7 @@ init -1 python hide:
     ## set to False before the game is released, so the user can't
     ## cheat using developer tools.
 
-    config.developer = True
+    config.developer = False
 
     ## These control the width and height of the screen.
 
@@ -29,10 +29,12 @@ init -1 python hide:
 
     config.window_title = "Broken Symmetry"
 
+    config.window_icon = "pics/icon.png"
+
     # These control the name and version of the game, that are reported
     # with tracebacks and other debugging logs.
-    config.name = "test"
-    config.version = "0.1"
+    config.name = "Release"
+    config.version = "1"
 
     #########################################
     # Themes
@@ -113,9 +115,9 @@ init -1 python hide:
     ## Padding is space inside the window, where the background is
     ## drawn.
 
-    # style.window.left_padding = 6
-    # style.window.right_padding = 6
-    # style.window.top_padding = 6
+    style.window.left_padding = 50
+    style.window.right_padding = 50
+    # style.window.top_padding = 3
     # style.window.bottom_padding = 6
 
     ## This is the minimum height of the window, including the margins
@@ -149,7 +151,15 @@ init -1 python hide:
 
     ## The file containing the default font.
 
-    # style.default.font = "DejaVuSans.ttf"
+    #style.default.font = "Fluox.ttf"
+    style.mm_button_text.font = "Fluox.ttf"
+    style.pref_label_text.font = "Fluox.ttf"
+    style.pref_button_text.font = "Fluox.ttf"
+    style.gm_nav_button_text.font = "Fluox.ttf"
+    style.say_label.font = "Raleway-Regular.ttf"
+    style.say_dialogue.font = "Raleway-Regular.ttf"
+    style.say_thought.font = "Raleway-Regular.ttf"
+
 
     ## The default size of text.
 
@@ -316,7 +326,7 @@ init python:
     ## The name that's used for directories and archive files. For example, if
     ## this is 'mygame-1.0', the windows distribution will be in the
     ## directory 'mygame-1.0-win', in the 'mygame-1.0-win.zip' file.
-    build.directory_name = "BrokenSymmetry-Beta"
+    build.directory_name = "BrokenSymmetry"
 
     ## The name that's uses for executables - the program that users will run
     ## to start the game. For example, if this is 'mygame', then on Windows,
